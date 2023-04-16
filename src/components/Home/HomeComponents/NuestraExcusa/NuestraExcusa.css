@@ -1,0 +1,30 @@
+.component-NuestraExcusa{
+    font-family: 'Montserrat', sans-serif;
+    padding: 60px 0px 0px 100px;
+    margin-top: 12vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.title-NuestraExcusa{
+    grid-column: 1/1;
+    grid-row: 1/1;
+    font-size: 8rem;
+    margin-bottom: 50px;
+    line-height: 8rem;
+}
+.body-NuestraExcusa{
+    grid-column: 1/1;
+    grid-row: 2/2;
+    font-size: 1.5rem;
+}
+
+.image-NuestraExcusa{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 550px;
+}
+
+::selection{
+    color: green;
+}
