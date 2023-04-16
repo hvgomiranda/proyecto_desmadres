@@ -19,9 +19,11 @@ function Menu(props)
             menuPage.style.display = "flex";
             menuBtn.style.color = "#e1e2d5";
             props.updateStyle({backgroundColor: "#dc500e", fill: "white"});
-            menuPageTextsArray.map(element => {
-                element.parentElement.classList.add("slide-top"); //todavía no funciona la animación
-            })
+            menuPageTextsArray.map((element, index) => {
+                setTimeout(() => {
+                    element.classList.add("slide-top-item");
+                }, index * 200);
+            });
         }
         else
         {
@@ -29,9 +31,11 @@ function Menu(props)
             menuPage.style.display = "none";
             menuBtn.style.color = "black";
             props.updateStyle({backgroundColor: "#e1e2d5"});
-            menuPageTextsArray.map(element => {
-                element.parentElement.classList.remove("slide-top");
-            })
+            menuPageTextsArray.map((element, index) => {
+                setTimeout(() => {
+                    element.classList.add("slide-top-item");
+                }, index * 200);
+            });
         }
     }
 
@@ -43,14 +47,14 @@ function Menu(props)
             </button>
            <nav>
                 <ul className="menu-page">
-                    <li><Link to="/">Desmadres</Link></li>
-                    <li><Link to="/que-es">¿Qué es?</Link></li>
-                    <li><Link to="/actividades">Actividades</Link></li>
-                    <li><Link to="/participantes">Participantes</Link></li>
-                    <li><Link to="/staff">Staff</Link></li>
-                    <li><Link to="/congreso">Congreso</Link></li>
-                    <li><Link to="/no-ficcion">Premios no ficción</Link></li>
-                    <li><Link to="/contacto">Contacto</Link></li>
+                    <li className="slide-top-item"><Link to="/">Desmadres</Link></li>
+                    <li className="slide-top-item"><Link to="/que-es">¿Qué es?</Link></li>
+                    <li className="slide-top-item"><Link to="/actividades">Actividades</Link></li>
+                    <li className="slide-top-item"><Link to="/participantes">Participantes</Link></li>
+                    <li className="slide-top-item"><Link to="/staff">Staff</Link></li>
+                    <li className="slide-top-item"><Link to="/congreso">Congreso</Link></li>
+                    <li className="slide-top-item"><Link to="/no-ficcion">Premios no ficción</Link></li>
+                    <li className="slide-top-item"><Link to="/contacto">Contacto</Link></li>
                 </ul> 
            </nav>
         </div>
